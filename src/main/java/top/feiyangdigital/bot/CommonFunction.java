@@ -238,7 +238,7 @@ public class CommonFunction {
                         KeywordsFormat keywordsFormat = new KeywordsFormat();
                         keywordsButtons.add("➕将Bot加入群组$$" + url);
                         keywordsButtons.add("❌关闭菜单##close");
-                        keywordsFormat.setReplyText("<b>GitHub地址：</b><b><a href='https://github.com/youshandefeiyang/feiyangdigital-bot'>点击查看</a></b>\n<b>官方群组：</b><b><a href='https://t.me/feiyangdigital'>点击加入</a></b>\n");
+                        keywordsFormat.setReplyText("👋你好，我是叫我沈同学的专属群管助理，可以有效查杀18+违规视频、贴图、图片，AI识别各种博彩，违规图片、文字，可设置正则自定义关键字回复、违规词汇删除等功能，支持每日词云统计，进群欢迎等多种实用群管功能\n\nPowered By 叫我沈同学");
                         keywordsFormat.setKeywordsButtons(keywordsButtons);
                         sender.execute((SendMessage) sendContent.createResponseMessage(update, keywordsFormat, "html"));
                     } else {

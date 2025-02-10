@@ -82,7 +82,6 @@ public class AddAutoReplyRule {
             } else {
                 List<String> keywordsButtons = new ArrayList<>();
                 KeywordsFormat keywordsFormat = new KeywordsFormat();
-                keywordsButtons.add("🔎查看使用文档$$https://github.com/youshandefeiyang/feiyangdigital-bot");
                 keywordsButtons.add("◀️返回上一级##backToAutoReply");
                 keywordsButtons.add("❌关闭菜单##closeMenu");
                 keywordsFormat.setReplyText("⚡️<b>规则不合法，请重新添加！</b>⚡️\n当前群组：<b>" + addRuleCacheMap.getGroupNameForUser(userId) + "</b>\n当前群组ID：<b>" + addRuleCacheMap.getGroupIdForUser(userId) + "</b>\n当前可输入状态：<b>" + addRuleCacheMap.getKeywordsFlagForUser(userId) + "</b>️");

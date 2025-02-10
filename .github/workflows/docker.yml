@@ -1,4 +1,4 @@
-name: feiyangdigital-bot
+name: ShenAssistnt
 
 on:
   push:
@@ -13,8 +13,8 @@ on:
       - 'src/**'
 
 env:
-  APP_NAME: feiyangdigital-bot
-  DOCKERHUB_REPO: youshandefeiyang/feiyangdigital-bot
+  APP_NAME: ShenAssistant
+  DOCKERHUB_REPO: shentx/shenassistant
 
 jobs:
   docker:
