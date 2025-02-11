@@ -15,6 +15,8 @@ import top.feiyangdigital.utils.SendContent;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import top.feiyangdigital.entity.KeywordsFormat;
 
+import java.util.ArrayList;
+
 @Service
 public class BotFirstIntoGroup {
     @Autowired
@@ -48,7 +50,7 @@ public class BotFirstIntoGroup {
                             KeywordsFormat keywordsFormat = new KeywordsFormat();
                             keywordsFormat.setReplyText("❌该群组暂无使用权限，请联系叫我沈同学开通");
                             keywordsFormat.setKeywordsButtons(keywordsButtons);
-                            sender.execute((SendMessage) sendContent.messageText(update, keywordsFormat));
+                            sender.execute((SendMessage) sendContent.createResponseMessage(update, keywordsFormat, 'html'));
                             LeaveChat leaveChat = new LeaveChat();
                             leaveChat.setChatId(chatId);
                             sender.execute(leaveChat);
