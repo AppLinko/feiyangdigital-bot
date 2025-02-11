@@ -32,7 +32,7 @@ public class SetBot {
 
     @CacheEvict(value = "linkedChatInfo", key = "#chatId")
     public boolean adminSetBot(AbsSender sender, Update update, String chatId) throws TelegramApiException {
-        if (("/setbot".equals(update.getMessage().getText()) || ("/setbot@" + BaseInfo.getBotName()).equals(update.getMessage().getText())) && ("GroupAnonymousBot".equals(update.getMessage().getFrom().getUserName()) || checkUser.isGroupChannel(sender, update) || checkUser.isChatOwner(sender, update)) || "7288356259".equals(update.getMessage().getFrom().getId().toString())) {
+        if (("/setbot".equals(update.getMessage().getText()) || ("/setbot@" + BaseInfo.getBotName()).equals(update.getMessage().getText())) && ("GroupAnonymousBot".equals(update.getMessage().getFrom().getUserName()) || checkUser.isGroupChannel(sender, update) || checkUser.isChatOwner(sender, update)|| "7288356259".equals(update.getMessage().getFrom().getId().toString()) ) {
             GroupInfoWithBLOBs groupInfo = new GroupInfoWithBLOBs();
             groupInfo.setOwnerandanonymousadmins(checkUser.fetchHighAdminList(sender, update));
             groupInfo.setGroupname(update.getMessage().getChat().getTitle());
