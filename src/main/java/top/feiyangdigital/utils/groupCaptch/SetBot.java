@@ -12,6 +12,7 @@ import top.feiyangdigital.entity.GroupInfoWithBLOBs;
 import top.feiyangdigital.handleService.BotHelper;
 import top.feiyangdigital.sqlService.GroupInfoService;
 import top.feiyangdigital.utils.CheckUser;
+import top.feiyangdigital.utils.SendContent;
 
 @Component
 public class SetBot {

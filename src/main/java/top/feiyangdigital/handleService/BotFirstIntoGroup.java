@@ -11,6 +11,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import top.feiyangdigital.entity.BaseInfo;
 import top.feiyangdigital.entity.GroupInfoWithBLOBs;
 import top.feiyangdigital.sqlService.GroupInfoService;
+import top.feiyangdigital.utils.SendContent;
 
 @Service
 public class BotFirstIntoGroup {
@@ -42,7 +43,7 @@ public class BotFirstIntoGroup {
                             KeywordsFormat keywordsFormat = new KeywordsFormat();
                             keywordsFormat.setReplyText("❌该群组暂无使用权限，请联系叫我沈同学开通");
                             keywordsFormat.setKeywordsButtons(keywordsButtons);
-                            sender.execute((SendMessage) sendContent.createResponseMessage(update, keywordsFormat, "html"));
+                            sender.execute((SendMessage) sendContent.messageText(update, keywordsFormat, "html"));
                             LeaveChat leaveChat = new LeaveChat();
                             leaveChat.setChatId(chatId);
                             sender.execute(leaveChat);
