@@ -41,7 +41,7 @@ public class SetBot {
             sender.execute(new DeleteMessage(chatId, update.getMessage().getMessageId()));
             return true;
         } else if ("/setbot".equals(update.getMessage().getText()) || ("/setbot@" + BaseInfo.getBotName()).equals(update.getMessage().getText())) {
-            sender.execute(sendContent.createResponseMessage(update, "❌你没有管理机器人的权限", "html"));
+            sender.execute(sendContent.createResponseMessage(update, "❌你没有管理机器人的权限", "def"));
             sender.execute(new DeleteMessage(chatId, update.getMessage().getMessageId()));
             return true;
         }
