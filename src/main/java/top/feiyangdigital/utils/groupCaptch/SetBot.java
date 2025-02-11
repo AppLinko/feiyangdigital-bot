@@ -14,6 +14,7 @@ import top.feiyangdigital.sqlService.GroupInfoService;
 import top.feiyangdigital.utils.CheckUser;
 import top.feiyangdigital.utils.SendContent;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import top.feiyangdigital.utils.TimerDelete;
 
 @Component
 public class SetBot {
