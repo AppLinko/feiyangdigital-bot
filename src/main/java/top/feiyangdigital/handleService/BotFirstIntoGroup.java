@@ -45,12 +45,13 @@ public class BotFirstIntoGroup {
                                 groupInfoService.addGroup(groupInfo);
                             }
                         } else {
+                            String url = String.format("https://t.me/ShentxBot");
                             List<String> keywordsButtons = new ArrayList<>();
+                            keywordsButtons.add("🙋开通权限$$" + url);
                             KeywordsFormat keywordsFormat = new KeywordsFormat();
-                            keywordsButtons.add("🙋开通权限$$https://t.me/ShentxBot");
                             keywordsFormat.setReplyText("❌该群组暂无使用权限，请联系叫我沈同学开通");
                             keywordsFormat.setKeywordsButtons(keywordsButtons);
-                            sender.execute((SendMessage) sendContent.createResponseMessage(update, keywordsFormat, "html"));
+                            sender.execute((SendMessage) sendContent.createResponseMessage(update, keywordsFormat, "def"));
                             LeaveChat leaveChat = new LeaveChat();
                             leaveChat.setChatId(chatId);
                             sender.execute(leaveChat);
