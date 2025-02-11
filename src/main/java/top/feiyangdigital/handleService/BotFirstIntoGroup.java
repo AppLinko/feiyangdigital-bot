@@ -37,6 +37,12 @@ public class BotFirstIntoGroup {
                                 groupInfoService.addGroup(groupInfo);
                             }
                         } else {
+                            List<String> keywordsButtons = new ArrayList<>();
+                            keywordsButtons.add("🙋开通权限$$https://t.me/ShentxBot");
+                            KeywordsFormat keywordsFormat = new KeywordsFormat();
+                            keywordsFormat.setReplyText("❌该群组暂无使用权限，请联系叫我沈同学开通");
+                            keywordsFormat.setKeywordsButtons(keywordsButtons);
+                            sender.execute((SendMessage) sendContent.messageText(update, keywordsFormat, "html"));
                             LeaveChat leaveChat = new LeaveChat();
                             leaveChat.setChatId(chatId);
                             sender.execute(leaveChat);
