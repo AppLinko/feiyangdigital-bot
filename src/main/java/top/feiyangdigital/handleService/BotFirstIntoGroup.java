@@ -21,6 +21,9 @@ public class BotFirstIntoGroup {
     @Autowired
     private NewMemberIntoGroup newMemberIntoGroup;
 
+    @Autowired
+    private SendContent sendContent;
+
     public void handleMessage(AbsSender sender, Update update) throws TelegramApiException {
         Message message = update.getMessage();
         if (message.getNewChatMembers() != null) {

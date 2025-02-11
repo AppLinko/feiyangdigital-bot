@@ -25,6 +25,9 @@ public class SetBot {
 
     @Autowired
     private CheckUser checkUser;
+    
+    @Autowired
+    private SendContent sendContent;
 
     @CacheEvict(value = "linkedChatInfo", key = "#chatId")
     public boolean adminSetBot(AbsSender sender, Update update, String chatId) throws TelegramApiException {
