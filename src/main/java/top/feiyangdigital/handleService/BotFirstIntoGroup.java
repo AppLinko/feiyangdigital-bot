@@ -13,6 +13,7 @@ import top.feiyangdigital.entity.GroupInfoWithBLOBs;
 import top.feiyangdigital.sqlService.GroupInfoService;
 import top.feiyangdigital.utils.SendContent;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import top.feiyangdigital.entity.KeywordsFormat;
 
 @Service
 public class BotFirstIntoGroup {
