@@ -10,7 +10,7 @@ public class BotController {
     private TgWebhookBot tgWebhookBot;
 
     @CrossOrigin("*")
-    @PostMapping("/feiyangdigitalbot")
+    @PostMapping("/shenassistant")
     public void onWebhookUpdateReceived(@RequestBody Update update) {
         tgWebhookBot.onWebhookUpdateReceived(update);
     }
