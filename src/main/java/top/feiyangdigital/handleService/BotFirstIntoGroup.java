@@ -46,7 +46,7 @@ public class BotFirstIntoGroup {
                             KeywordsFormat keywordsFormat = new KeywordsFormat();
                             keywordsFormat.setReplyText("❌该群组暂无使用权限，请联系叫我沈同学开通");
                             keywordsFormat.setKeywordsButtons(keywordsButtons);
-                            sender.execute((SendMessage) sendContent.messageText(update, keywordsFormat, "html"));
+                            sender.execute((SendMessage) sendContent.messageText(update, keywordsFormat));
                             LeaveChat leaveChat = new LeaveChat();
                             leaveChat.setChatId(chatId);
                             sender.execute(leaveChat);
