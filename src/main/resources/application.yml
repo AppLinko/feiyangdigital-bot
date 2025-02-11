@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://mysql:3306/bot?useSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true
-    username: root
-    password: password
+    url: jdbc:mysql://host.docker.internal:3306/bot?useSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true
+    username: bot
+    password: Me6BDcAkaPJE3cc8
     driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
     host: redis
