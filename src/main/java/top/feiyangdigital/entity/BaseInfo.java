@@ -57,7 +57,7 @@ public class BaseInfo {
     }
 
     public static JSONArray getChatGPTApiHost(){
-        return CONFIG.getJSONArray("ChatGPTApiHost");
+        return CONFIG.getString("ChatGPTApiHost");
     }
 
     public static String getApiServer(){
