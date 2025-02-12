@@ -69,7 +69,6 @@ public class OpenAiApiService {
         return OpenAiClient.builder()
                 .apiKey(list)
                 .authInterceptor(new DynamicKeyOpenAiAuthInterceptor())
-                .baseUrl("https://api-gpt.shenkx.com")
                 .build();
     }
 
