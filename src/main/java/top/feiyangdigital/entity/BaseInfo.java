@@ -56,7 +56,7 @@ public class BaseInfo {
         return CONFIG.getJSONArray("openAIApiKey");
     }
 
-    public static JSONArray getChatGPTApiHost(){
+    public static String getChatGPTApiHost(){
         return CONFIG.getString("ChatGPTApiHost");
     }
 
