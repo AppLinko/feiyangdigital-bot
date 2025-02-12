@@ -69,7 +69,7 @@ public class OpenAiApiService {
         return OpenAiClient.builder()
                 .apiKey(list)
                 .authInterceptor(new DynamicKeyOpenAiAuthInterceptor())
-                .apiHost("https://api-gpt.shenkx.com/v1/chat/completions")
+                .apiHost(BaseInfo.getChatGPTApiHost())
                 .build();
     }
 
